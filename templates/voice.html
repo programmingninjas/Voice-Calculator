@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Voice Calculator</title>
+    <style>
+    body{
+        background-color: #080e39;
+        }
+
+    </style>
+</head>
+<body>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class='container'>
+    <div class="text-center">
+        <img src="/static/logo.jpg" class="img-fluid" alt="logo">
+        <br/>
+        <br/>
+        <br/>
+    <input type="text" class="form-control"  id="speechToText" placeholder="Speak Something">
+    <br/>
+    <button class="btn btn-outline-primary" onclick="record()"><input type="image" src="/static/mic.png" name="submit" width="50" height="48" alt="submit"/>  </button>
+
+    <!-- Below is the script for voice recognition and conversion to text-->
+    <script>
+      function backend(Input){                     //Function for AJAX to send voice input to backend i.e Flask
+          var xml = new XMLHttpRequest();
+          xml.open("POST","/backend",true);
+          xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+          xml.onload = function(){
+
+                var dataReply = JSON.parse(this.responseText)
+                alert(dataReply)
+          };
+          dataSend = JSON.stringify(Input)
+          xml.send(dataSend)
+      }
+        function record() {                                    //Function for SpeechRecognition
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function(event) {
+                
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+                var input = event.results[0][0].transcript;
+                backend(input)
+                
+            }
+            recognition.start();
+
+        }
+    </script>
+    <!-- end of script -->
+
+</body>
+</html>
