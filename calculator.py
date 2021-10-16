@@ -1,6 +1,8 @@
 import math
 from numerizer import numerize
+from sympy import sympify,solve,integrate,diff,symbols
 
+x = symbols('x')
 
 def calculate(input):
 
@@ -73,8 +75,6 @@ def calculate(input):
 
     text0 = (string.lower()).split()
 
-    print(text0)
-
     values = []
 
     numerals = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','billion','million','hundred','thousand']
@@ -96,8 +96,32 @@ def calculate(input):
     try:
 
         global text
+        
+        if 'evaluate' in input.lower():
 
-        if 'add' in input.lower() or '+' in input:
+            str_ = input.lower().replace('evaluate','')
+            data = (((str_.replace(' ','')).replace('square','**2')).replace('into','*').replace('cube','**3')).lower()
+            expr = sympify(data)
+            roots = solve(expr)
+            text = 'Result: ' + str(roots)
+
+        elif 'integrate' in input.lower():
+
+            str_ = input.lower().replace('integrate','')
+            data = (((str_.replace(' ','')).replace('square','**2')).replace('into','*').replace('cube','**3')).lower()
+            expr = sympify(data)
+            value = integrate(expr,x)
+            text = 'Result: ' + str(value)
+
+        elif 'differentiate' in input.lower():
+
+            str_ = input.lower().replace('differentiate','')
+            data = (((str_.replace(' ','')).replace('square','**2')).replace('into','*').replace('cube','**3')).lower()
+            expr = sympify(data)
+            value = diff(expr,x)
+            text = 'Result: ' + str(value)
+
+        elif 'add' in input.lower() or '+' in input:
 
             for i in text0:
 
@@ -114,7 +138,7 @@ def calculate(input):
             text='Result: '+ str(sum(values))
             
 
-        if 'subtract' in input.lower() or '--' in input:
+        elif 'subtract' in input.lower() or '--' in input:
 
             for i in text0:
 
@@ -130,7 +154,7 @@ def calculate(input):
 
             text='Result: '+ str(subtract(values[0], values[1]))
 
-        if 'multiply' in input.lower() or '*' in input:
+        elif 'multiply' in input.lower() or '*' in input:
 
             for i in text0:
 
@@ -146,7 +170,7 @@ def calculate(input):
 
             text='Result: ' + str(multiply(*values))
 
-        if 'divide' in input.lower() or '/' in input:
+        elif 'divide' in input.lower() or '/' in input:
 
             for i in text0:
 
@@ -163,7 +187,7 @@ def calculate(input):
             text='Result: ' + str(divide(values[0], values[1]))
 
 
-        if 'raised' in input.lower() or 'power' in input.lower():
+        elif 'raised' in input.lower() or 'power' in input.lower():
 
             for i in text0:
 
@@ -179,7 +203,7 @@ def calculate(input):
 
             text='Result: ' + str(power(values[0], values[1]))
 
-        if 'factorial' in input.lower():
+        elif 'factorial' in input.lower():
 
             for i in text0:
 
@@ -195,7 +219,7 @@ def calculate(input):
 
             text='Result: ' + str(factorial(values[0]))
 
-        if 'root' in input.lower() or 'sqrt' in input.lower():
+        elif 'root' in input.lower() or 'sqrt' in input.lower():
 
             for i in text0:
 
@@ -211,7 +235,7 @@ def calculate(input):
 
             text='Result: ' + str(square_root(values[0]))
 
-        if 'log' in input.lower():
+        elif 'log' in input.lower():
 
             for i in text0:
 
