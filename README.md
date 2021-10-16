@@ -19,9 +19,9 @@
 
 * #### Added new operations:
   
-  * Find x for expressions (supported: linear,quadratic,cubic)   &nbsp;&nbsp; &nbsp;         SAY: "evaluate x square minus 4"
-  * Integrate (supported: linear,quadratic,cubic)                &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         SAY: "integrate x square minus 4"
-  * Differentiate (supported: linear,quadratic,cubic)            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         SAY: "differentiate x square minus 4"
+  * Find x for expressions (supported: linear,quadratic,cubic)          </br> SAY: "evaluate x square minus 4"
+  * Integrate (supported: linear,quadratic,cubic)                       </br> SAY: "integrate x square minus 4"
+  * Differentiate (supported: linear,quadratic,cubic)                   </br> SAY: "differentiate x square minus 4"
 
 * Below is the link for the demo:
 
