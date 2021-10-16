@@ -8,14 +8,20 @@
 
 * #### You can perform the following mathematical operations:
 
-  * Addition                    say: "Add 1 + 2" or "1 plus 2"
-  * Subtraction                 say: "Subtract 10-5" or "10 minus 5" 
-  * Multiplication              say: "10 multiplied by 5" or "multiply 10 and 5"
-  * Division                    say: "10 divided by 5" or "divide 10 by 5"
-  * Logarithms                  say: "log 2" or "log 2 base 10"
-  * Square Root                 say: "square root of 4"
-  * Factorial                   say: "Factorial of 5"
-  * Exponent                    say: "2 raised 10" or "2 power 10"
+  * Addition           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;          SAY: "Add 1 + 2" or "1 plus 2"
+  * Subtraction        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;         SAY: "Subtract 10-5" or "10 minus 5" 
+  * Multiplication     &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         SAY: "10 multiplied by 5" or "multiply 10 and 5"
+  * Division           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;         SAY: "10 divided by 5" or "divide 10 by 5"
+  * Logarithms         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;        SAY: "log 2" or "log 2 base 10"
+  * Square Root        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;         SAY: "square root of 4"
+  * Factorial          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;        SAY: "Factorial of 5"
+  * Exponent           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;        SAY: "2 raised 10" or "2 power 10"
+
+* #### Added new operations:
+  
+  * Find x for expressions (supported: linear,quadratic,cubic)   &nbsp;&nbsp; &nbsp;         SAY: "evaluate x square minus 4"
+  * Integrate (supported: linear,quadratic,cubic)                &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         SAY: "integrate x square minus 4"
+  * Differentiate (supported: linear,quadratic,cubic)            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;         SAY: "differentiate x square minus 4"
 
 * Below is the link for the demo:
 
